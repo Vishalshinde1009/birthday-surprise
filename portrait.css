@@ -1,0 +1,5 @@
+/* Keep the dedicated portrait exactly as supplied: full image, no crop. */
+.portrait-frame img {
+  object-fit: contain;
+  background: #080b16;
+}

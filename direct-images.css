@@ -1,0 +1,12 @@
+/* Supplied photos: display them directly, without placeholder layers. */
+.portrait-frame img,
+.gallery-card img,
+.surprise-photo img {
+  display: block !important;
+}
+
+.portrait-frame .media-fallback,
+.gallery-card .media-fallback,
+.surprise-photo .media-fallback {
+  display: none !important;
+}
