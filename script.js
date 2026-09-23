@@ -1,4 +1,4 @@
-const photos = ['assets/teacher1.jpg','assets/teacher2.jpg','assets/teacher3.jpg'];
+const photos = ['teacher1.jpg','teacher2.jpg','teacher3.jpg'];
 const audio = document.getElementById('birthdayMusic');
 const musicButton = document.getElementById('musicButton');
 const toast = document.getElementById('toast');
@@ -10,7 +10,7 @@ document.querySelectorAll('[data-photo]').forEach(img => {
 });
 function showToast(message){ toast.textContent = message; toast.classList.add('show'); setTimeout(()=>toast.classList.remove('show'), 3500); }
 function setMusicLabel(playing){ musicButton.classList.toggle('playing', playing); musicButton.setAttribute('aria-pressed', playing); musicButton.querySelector('span:last-child').textContent = playing ? 'Ⅱ Pause Music' : '♪ Play Birthday Song'; }
-musicButton.addEventListener('click', async () => { if(audio.paused){ try { await audio.play(); setMusicLabel(true); } catch { showToast('Add your birthday-song.mp3 to the assets folder to play it.'); } } else { audio.pause(); setMusicLabel(false); }});
+musicButton.addEventListener('click', async () => { if(audio.paused){ try { await audio.play(); setMusicLabel(true); } catch { showToast('The birthday song could not be played.'); } } else { audio.pause(); setMusicLabel(false); }});
 audio.addEventListener('ended',()=>setMusicLabel(false));
 
 const observer = new IntersectionObserver(entries => entries.forEach(e => {if(e.isIntersecting){e.target.classList.add('visible'); if(e.target.querySelector('#letterText')) document.getElementById('letterText').classList.add('active');}}),{threshold:.16});

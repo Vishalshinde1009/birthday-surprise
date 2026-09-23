@@ -1,6 +1,6 @@
 # Birthday Tribute Website
 
-Open `index.html` directly in a browser. To personalise it, put the original, unedited teacher photos and birthday audio in `assets/` using these names:
+Open `index.html` directly in a browser. Keep the original, unedited teacher photos and birthday audio in this project root using these names:
 
 - `teacher1.jpg` (first gallery photo and surprise photo)
 - `teacher2.jpg`
